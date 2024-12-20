@@ -1,0 +1,77 @@
+
+.checkbox {
+
+  &__element {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+
+    &::before {
+      content: "";
+      display: flex;
+      position: relative;
+      width: 42px;
+      height: 24px;
+      border: 2px solid transparent;
+      border-radius: 24px;
+      align-self: flex-start;
+      background-color: $base-grey;
+      -webkit-transition: all 0.3s;
+      transition: all 0.3s;
+    }
+
+    &::after {
+      content: "";
+      display: flex;
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      align-items: flex-start;
+      left: 2px;
+      top: 2px;
+      border-radius: 100%;
+      background-color: $base-white;
+      transition: transform .3s, background-color .3s;
+    }
+  }
+
+  &:hover > &__element::before,
+  &:focus-within > &__element::before {
+
+    background-color: $primary-opacity;
+    border-color: $primary-lighter;
+  }
+
+  &__input:checked + &__element::after {
+    transform: translateX(18px);
+  }
+
+  &__input:checked + &__element::before {
+    background-color: $base-primary;
+    border-color: $base-primary;;
+  }
+
+  &__input:disabled + &__element::before {
+    background-color: $light-grey;
+  }
+
+  &__input:disabled + &__element::after {
+    background-color: $lightest-grey;
+  }
+
+  &__input:disabled + &__element  {
+    color: $base-grey;
+  }
+
+  &__input:checked:disabled + &__element::before {
+    background-color: $light-grey;
+    border-color: $light-grey;
+  }
+  &__input:checked:disabled + &__element::after {
+    background-color: $base-grey;
+  }
+}
+
+
+

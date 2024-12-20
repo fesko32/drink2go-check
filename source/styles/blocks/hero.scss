@@ -1,0 +1,12 @@
+.hero {
+  background-color: $flat-white;
+
+  &__item {
+    display: flex;
+  }
+
+  &__list {
+    padding-top: 20px;
+    padding-bottom: 60px;
+  }
+}

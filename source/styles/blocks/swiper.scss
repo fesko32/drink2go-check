@@ -1,0 +1,101 @@
+.swiper {
+
+  position: relative;
+  &__item {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+
+  &__img {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  &__label {
+    margin-bottom: 4px;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 133%;
+    letter-spacing: 0.02em;
+    text-align: center;
+    color: $base-black;
+    margin-bottom: 10px;
+  }
+
+  &__data-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__paragraph {
+    margin: 0 0 20px 0;
+    text-align: center;
+    color: $base-black;
+
+  }
+
+  &__bottom-wrap {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  &__price-wrap {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  &__price-old {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 200%;
+    text-decoration: line-through;
+    color: $base-primary;
+  }
+
+  &__price-new {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 160%;
+  }
+
+  &__button-wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+
+  &__button {
+    border: none;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    width: 11px;
+
+    &--prev {
+      background-image: url('../../icons/stack.svg#arrow');
+
+      margin-left: 4px;
+
+    }
+
+
+    &--next {
+      background-image: url('../../icons/stack.svg#arrow');
+      transform: rotate(180deg);
+      margin-right: 4px;
+    }
+  }
+}

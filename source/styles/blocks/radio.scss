@@ -1,0 +1,80 @@
+.radio {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  position: relative;
+
+  &__element {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    &::before {
+      content: "";
+      display: flex;
+      position: relative;
+      min-width: 24px;
+      height: 24px;
+      border-radius: 100%;
+      align-self: flex-start;
+      border: 2px solid $base-grey;
+      -webkit-transition: all 0.3s;
+      transition: all 0.3s;
+    }
+
+    &::after {
+      content: "";
+      display: none;
+      position: absolute;
+      width: 16px;
+      align-items: flex-start;
+      left: 4px;
+      top: 4px;
+      height: 16px;
+      border-radius: 100%;
+      transition: all .3s;
+      background-color: $base-primary;
+    }
+
+    &:checked + &::after {
+      background-color: $base-primary;
+    }
+  }
+
+  &:hover > &__element::after,
+  &:focus-within > &__element::after {
+    display: flex;
+    background-color: $primary-opacity;
+  }
+
+  &:hover > &__element::before,
+  &:focus-within > &__element::before {
+    border-color: $primary-lighter;
+  }
+
+  &__input:checked + &__element::after {
+    display: flex;
+    background-color: $base-primary;
+  }
+
+  &__input:checked + &__element::before {
+    border-color: $base-primary;
+  }
+
+  &__input:checked:disabled + &__element::after {
+    display: flex;
+    background-color: $light-grey;
+  }
+
+  &__input:disabled + &__element  {
+    color: $base-grey;
+  }
+
+  &__input:disabled + &__element::before  {
+    border-color: $light-grey;
+  }
+
+  &__input:disabled + &__element::after   {
+    display: none;
+  }
+}

@@ -1,7 +1,18 @@
 /* GLOBAL */
 @import "./common/variables.scss";
-@import "./common/global.scss";
+@import "./common/visually-hidden.scss";
+@import "./common/mixins.scss";
 @import "./common/fonts.scss";
+@import "./common/global.scss";
 
 /* BLOCKS */
+@import "./blocks/button.scss";
+@import "./blocks/checkbox.scss";
+@import "./blocks/radio.scss";
+@import "./blocks/label-section.scss";
 @import "./blocks/header.scss";
+@import "./blocks/navigation.scss";
+@import "./blocks/hero.scss";
+@import "./blocks/swiper.scss";
+@import "./blocks/advantages.scss";
+@import "./blocks/catalog.scss";

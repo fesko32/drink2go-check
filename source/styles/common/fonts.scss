@@ -1,1 +1,9 @@
-/* здесь подключите шрифты */
+$primary-font: "Montserrat";
+
+@include font-face("Montserrat", 400, url("../../fonts/Montserrat-Regular.woff2") format("woff2"), normal);
+@include font-face("Montserrat", 500, url("../../fonts/Montserrat-Medium.woff2") format("woff2"), normal);
+@include font-face("Montserrat", 600, url("../../fonts/Montserrat-SemiBold.woff2") format("woff2"), normal);
+@include font-face("Montserrat", 700, url("../../fonts/Montserrat-Bold.woff2") format("woff2"), normal);
+@include font-face("Montserrat", 800, url("../../fonts/Montserrat-ExtraBold.woff2") format("woff2"), normal);
+
+
