@@ -1,0 +1,85 @@
+#price-slider {
+  background-color: $light-grey; /* Фон слайдера */  /* Рамка вокруг слайдера */       /* Скругление углов */
+  height: 2px; /* Высота полосы */
+  border: none;
+  border-radius: 0;
+  position: relative;
+  overflow: visible;
+}
+.price-range {
+  text-align: center;
+  margin-top: 11px;
+}
+
+.price-values {
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 35px;
+}
+
+.price-inpun {
+  width: 118px;
+  height: 40px;
+  padding: 5px;
+  font-size: 16px;
+  border: 2px solid $primary-lighter;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  text-align: center;
+  font-family: $primary-font;
+
+
+}
+
+
+#price-slider .noUi-handle {
+  background: $base-white;
+  box-shadow: none;
+  border: 2px solid $primary-lighter;
+  width: 24px;
+  height: 24px;
+  top: -10px;
+  border-radius: 100%;
+
+
+  &::before, &::after {
+    display: none;
+  }
+}
+#price-slider .noUi-handle-lower {
+  right: -24px;
+}
+
+#price-slider .noUi-handle-upper {
+  right: -9px;
+}
+
+#price-slider .noUi-connects {
+  background-color: $light-grey;
+  height:2px;
+
+}
+#price-slider .noUi-connect {
+  height: 4px; /* Высота полосы между ручками */
+  position: absolute; /* Позволяет управлять размещением */
+  top: -1px;
+  width: 280px;
+  left: 0;
+  background-color: $primary-lighter;
+}
+
+
+.noUi-base,
+.noUi-connects {
+  width: 100%;
+  height: 100%;
+  position: static;
+  z-index: 1
+}
+
+

@@ -1,15 +1,18 @@
 .button {
   background: $base-primary;
   color: $base-white;
+  font-family: $primary-font;
   border-radius: 4px;
   padding: 8px 20px;
   border: none;
   font-size: 16px;
   line-height: 150%;
   font-weight: 400;
+  cursor: pointer;
 
   &:hover, &:focus {
     background-color: $primary-lighter;
+    outline: none;
   }
 
   &:active {

@@ -2,6 +2,7 @@
   background-color: $lightest-grey;
   padding-top: 50px;
 
+
   &__label {
     margin-bottom: 4px;
   }
@@ -17,6 +18,7 @@
     border: none;
     margin: 0;
     padding: 0;
+    margin-bottom: 30px;
   }
 
   &__subtitle {
@@ -24,7 +26,7 @@
     font-weight: 600;
     font-size: 16px;
     line-height: 150%;
-    margin-bottom: 20px;
+    margin-bottom: 20px
   }
 
   &__checkbox-list {
@@ -33,9 +35,210 @@
     gap: 20px;
   }
 
-  &__item {
+
+  &__form {
+    margin-bottom: 42px;
+
+  }
+
+  &__form-buttom-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__form-button--reset  {
+    color: $base-primary;
+    background-color: $base-white;
+
+    &:hover,&:focus {
+      color: $base-white;
+    }
+
+    &:disabled {
+      background-color: $light-grey;
+      color: $base-white;
+    }
+  }
+
+
+
+  &__sort-label {
+    font-weight: 600;
+    padding-left: 4px;
+    margin-top: 5px;
+    font-size: 16px;
+    line-height: 150%;
+    color: $base-black;
+    font-weight: 600;
+  }
+
+  &__select-wrap {
+    position: relative;
+    display: inline-flex;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 10px;
+      right: 0;
+      display: block;
+      width: 10px;
+      height: 10px;
+      background-image: url("../../icons/stack.svg#arrow");
+      transform: rotate(-90deg);
+    }
+
+    &.active::after{
+      transform:  rotate(90deg);
+    }
+  }
+
+  &__select {
+    border: none;
+    background: transparent;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 150%;
+    color: $base-primary;
+    padding: 4px 20px 4px 10px;
+    appearance: none;
+    font-family: $primary-font;
+
+    &:hover,&:focus {
+      background-color: $base-secondary;
+      outline: none;
+    }
+  }
+
+  &__cart-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__cart-item {
+    width: 280px;
+    min-height: 420px;
+    background-color: $base-white;
+    padding: 40px 20px 20px 18px;
+  }
+
+  &__cart-img {
+    display: block;
+    margin-bottom: 22px;
+    width: 130px;
+    height: 188px;
+
+  }
+
+  &__cart-title {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 178%;
+    color: $base-black;
+    margin-bottom: 4px;
+  }
+
+  &__cart-paragraph {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 143%;
+    color: $base-black;
+    margin-bottom: 16px;
+  }
+
+  &__price-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__price {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 160%;
+  }
+
+  &__cart-button {
     display: flex;
     align-items: center;
+    gap: 6px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 143%;
+    &::before {
+      content: '';
+      display: block;
+      position: relative;
+      width: 20px;
+      height: 16px;
+      background-image: url("../../icons/stack.svg#catalog-basket");
+    }
+  }
+
+  &__sort-header-wrap {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 16px;
+  }
+
+  &__pagination-wrap {
+    display: flex;
+    padding-top: 40px;
+    padding-bottom: 44px;
+    gap: 20px;
+  }
+
+  &__pagination-list {
+    display: flex;
+
+    gap: 20px;
+  }
+
+  &__pagination-button {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $base-white;
+
+
+    &::before {
+      content: '';
+      display: block;
+      width: 12px;
+      height: 10px;
+      top: -1px;
+      position: relative;
+      background-image: url('../../icons/stack.svg#pagination-arrow');
+    }
+
+    &--next::before  {
+      transform: rotate(180deg);
+    }
+
+
+  }
+
+  &__pagination-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    background-color: $base-white;
+    color: $base-primary;
+
+    &--current {
+      background-color: transparent;
+      font-weight: 600;
+      color: $base-black;
+    }
   }
 }
 

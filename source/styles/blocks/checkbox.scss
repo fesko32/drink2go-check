@@ -6,6 +6,9 @@
     align-items: center;
     gap: 10px;
     position: relative;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
 
     &::before {
       content: "";

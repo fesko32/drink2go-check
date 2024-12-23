@@ -1,0 +1,19 @@
+.map {
+  &__img {
+    display: block;
+  }
+  &__img-wrap {
+    position: relative;
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 38px;
+      height: 50px;
+      top: 43%;
+      left: 49%;
+      background-image: url('../../icons/stack.svg#map-pin');
+    }
+  }
+
+}

@@ -8,6 +8,9 @@
     display: flex;
     align-items: center;
     gap: 10px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
 
     &::before {
       content: "";
