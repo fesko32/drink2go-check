@@ -12,7 +12,7 @@
     <script src="scripts/index.js" defer></script>
   </head>
   <body class="page__body">
-    <header class="header container">
+    <header class="header container" data-test="header">
       <div class="header__info-wrap">
         <a href="#" class="header__logo">
           <picture>
@@ -29,7 +29,7 @@
 
 
       <nav class="navigation">
-        <button class="navigation__toggle">
+        <button class="navigation__toggle js-toggle-button">
           <span class="visually-hidden">Бургер меню</span>
         </button>
         <ul class="navigation__main-list">
@@ -49,14 +49,14 @@
 
         <ul class="navigation__user-menu">
           <li class="navigation__user-item">
-            <a class="navigation__user-button navigation__user-button--user-icon" type="button">
+            <a href="#" class="navigation__user-button navigation__user-button--user-icon" type="button">
               <span class="visually-hidden">
                 Войти
               </span>
             </a>
           </li>
           <li class="navigation__user-item">
-            <a class="navigation__user-button navigation__user-button--basket-icon" type="button">
+            <a href="#" class="navigation__user-button navigation__user-button--basket-icon" type="button">
               <span class="visually-hidden">
                 Корзина
               </span>
@@ -67,7 +67,7 @@
     </header>
     <main class="main-content">
       <h1 class="visually-hidden">Интернет магазин Drink GO</h1>
-      <section class="hero">
+      <section class="hero" data-test="hero">
         <ul class="hero__list swiper swiper__wrap">
           <li class="swiper__item container">
             <div class="swiper__picture-wrapper">
@@ -141,23 +141,23 @@
               </div>
           </li>
 
-            <ul class="swiper__pagination-wrap">
+            <ul class="swiper__pagination-wrap slider-pagination">
               <li class="swiper__pagination"></li>
               <li class="swiper__pagination"></li>
               <li class="swiper__pagination"></li>
             </ul>
             <li class="swiper__button-wrap">
-              <button class="swiper__button swiper__button--prev">
+              <button class="swiper__button swiper__button--prev slider-button-prev">
                 <span class="visually-hidden">Предыдущий слайд</span>
               </button>
-              <button class="swiper__button swiper__button--next">
+              <button class="swiper__button swiper__button--next slider-button-next">
                 <span class="visually-hidden">Следующий слайд</span>
               </button>
             </li>
         </ul>
       </section>
 
-      <section class="advantages container">
+      <section class="advantages container" data-test="features">
         <span class="advantages__label label-section">
           Преимущества
         </span>
@@ -197,7 +197,7 @@
         </ul>
       </section>
 
-      <section class="catalog" id="catalog">
+      <section class="catalog" id="catalog" data-test="catalog">
         <div class="catalog__container container">
           <span class="catalog__label label-section">Каталог</span>
           <h2 class="catalog__title">Каталог кофейных напитков</h2>
@@ -407,26 +407,26 @@
             </ul>
 
             <div class="catalog__pagination-wrap">
-              <a class="catalog__pagination-button catalog__pagination-button--prev"><span class="catalog__pagination-button-text">Назад</span></a>
+              <a href="#" class="catalog__pagination-button catalog__pagination-button--prev disabled"><span class="catalog__pagination-button-text">Назад</span></a>
               <ul class="catalog__pagination-list">
                 <li class="catalog__pagination-item">
-                  <a class="catalog__pagination-link" href="#">1</a>
+                  <a class="catalog__pagination-link catalog__pagination-link--current " href="">1</a>
                 </li>
                 <li class="catalog__pagination-item">
-                  <a class="catalog__pagination-link catalog__pagination-link--current">2</a>
+                  <a class="catalog__pagination-link" href="#">2</a>
                 </li>
                 <li class="catalog__pagination-item">
                   <a class="catalog__pagination-link" href="#">3</a>
                 </li>
               </ul>
-              <a class="catalog__pagination-button catalog__pagination-button--next" href="#"><span class="catalog__pagination-button-text">Вперед</span></a>
+              <a href="#" class="catalog__pagination-button catalog__pagination-button--next"><span class="catalog__pagination-button-text">Вперед</span></a>
             </div>
           </div>
         </div>
 
       </section>
 
-      <section class="map">
+      <section  class="map " data-test="map">
         <h2 class="visually-hidden">Карта</h2>
         <div class="map__img-wrap">
           <picture>
@@ -441,7 +441,7 @@
       </section>
     </main>
 
-    <footer class="footer">
+    <footer class="footer" data-test="footer">
       <div class="footer__container container">
         <div class="footer__header-wrap ">
           <a href="index.html" class="footer__logo-link">
@@ -460,17 +460,17 @@
           <ul class="footer__header-social-list">
             <li class="footer__header-social-item">
               <a class="footer__header-social-link" href="#">
-                <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M1.4 1.4c-1.4 1.41-1.4 3.67-1.4 8.2v.8c0 4.53 0 6.79 1.4 8.2 1.41 1.4 3.67 1.4 8.2 1.4h.8c4.53 0 6.79 0 8.2-1.4 1.4-1.41 1.4-3.67 1.4-8.2v-.8c0-4.53 0-6.79-1.4-8.2-1.41-1.4-3.67-1.4-8.2-1.4h-.8c-4.53 0-6.79 0-8.2 1.4Zm1.98 4.68c.1 5.2 2.7 8.33 7.26 8.33h.26v-2.98a4.11 4.11 0 0 1 3.45 2.98h2.37a6.58 6.58 0 0 0-3.43-4.18 6.35 6.35 0 0 0 2.93-4.15h-2.15c-.47 1.65-1.85 3.15-3.17 3.3v-3.3h-2.15v5.77c-1.33-.33-3.02-1.95-3.1-5.77h-2.27Z" fill="#BDBDBD"/></svg>
+                <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M1.4 1.4c-1.4 1.41-1.4 3.67-1.4 8.2v.8c0 4.53 0 6.79 1.4 8.2 1.41 1.4 3.67 1.4 8.2 1.4h.8c4.53 0 6.79 0 8.2-1.4 1.4-1.41 1.4-3.67 1.4-8.2v-.8c0-4.53 0-6.79-1.4-8.2-1.41-1.4-3.67-1.4-8.2-1.4h-.8c-4.53 0-6.79 0-8.2 1.4Zm1.98 4.68c.1 5.2 2.7 8.33 7.26 8.33h.26v-2.98a4.11 4.11 0 0 1 3.45 2.98h2.37a6.58 6.58 0 0 0-3.43-4.18 6.35 6.35 0 0 0 2.93-4.15h-2.15c-.47 1.65-1.85 3.15-3.17 3.3v-3.3h-2.15v5.77c-1.33-.33-3.02-1.95-3.1-5.77h-2.27Z" fill=""/></svg>
               </a>
             </li>
             <li class="footer__header-social-item">
               <a class="footer__header-social-link" href="">
-                <svg viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11 0a11 11 0 0 0-4 21.25c-.1-.87-.2-2.21.03-3.16l1.29-5.47s-.33-.66-.33-1.63c0-1.53.89-2.67 2-2.67.93 0 1.38.7 1.38 1.54 0 .95-.6 2.36-.9 3.67-.27 1.1.54 1.99 1.62 1.99 1.96 0 3.46-2.07 3.46-5.04 0-2.64-1.9-4.48-4.6-4.48a4.76 4.76 0 0 0-4.96 4.78c0 .94.36 1.96.82 2.5.09.12.1.21.07.32l-.3 1.25c-.05.2-.16.24-.37.15-1.38-.64-2.23-2.65-2.23-4.26 0-3.47 2.52-6.66 7.26-6.66 3.82 0 6.78 2.72 6.78 6.35 0 3.8-2.39 6.84-5.7 6.84-1.12 0-2.17-.58-2.52-1.26l-.69 2.62a12.3 12.3 0 0 1-1.37 2.88 11 11 0 1 0 3.26-21.51Z" fill="#BDBDBD"/></svg>
+                <svg viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11 0a11 11 0 0 0-4 21.25c-.1-.87-.2-2.21.03-3.16l1.29-5.47s-.33-.66-.33-1.63c0-1.53.89-2.67 2-2.67.93 0 1.38.7 1.38 1.54 0 .95-.6 2.36-.9 3.67-.27 1.1.54 1.99 1.62 1.99 1.96 0 3.46-2.07 3.46-5.04 0-2.64-1.9-4.48-4.6-4.48a4.76 4.76 0 0 0-4.96 4.78c0 .94.36 1.96.82 2.5.09.12.1.21.07.32l-.3 1.25c-.05.2-.16.24-.37.15-1.38-.64-2.23-2.65-2.23-4.26 0-3.47 2.52-6.66 7.26-6.66 3.82 0 6.78 2.72 6.78 6.35 0 3.8-2.39 6.84-5.7 6.84-1.12 0-2.17-.58-2.52-1.26l-.69 2.62a12.3 12.3 0 0 1-1.37 2.88 11 11 0 1 0 3.26-21.51Z" fill=""/></svg>
               </a>
             </li>
             <li class="footer__header-social-item">
               <a class="footer__header-social-link" href="">
-                <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M1.4 1.4c-1.4 1.41-1.4 3.67-1.4 8.2v.91c0 4.46 0 6.7 1.4 8.09 1.41 1.4 3.67 1.4 8.2 1.4h.91c4.46 0 6.7 0 8.09-1.4 1.4-1.41 1.4-3.67 1.4-8.2v-.91c0-4.46 0-6.7-1.4-8.09-1.41-1.4-3.67-1.4-8.2-1.4h-.91c-4.46 0-6.7 0-8.09 1.4Zm8.62 8.8a3.03 3.03 0 1 0-.01-6.07 3.03 3.03 0 0 0 0 6.07Zm0-4.28a1.25 1.25 0 0 1 0 2.5c-.69 0-1.25-.56-1.25-1.25a1.23 1.23 0 0 1 1.25-1.25Zm1.21 6.76a5.73 5.73 0 0 0 1.76-.72.88.88 0 0 0 .28-1.24.88.88 0 0 0-1.24-.27 3.85 3.85 0 0 1-4.08 0 .9.9 0 0 0-1.23.27.9.9 0 0 0 .3 1.22 5.8 5.8 0 0 0 1.77.72l-1.69 1.69a.89.89 0 0 0 0 1.25c.18.18.4.25.63.25.24 0 .46-.09.64-.25l1.67-1.67 1.67 1.67a.89.89 0 0 0 1.25-1.25l-1.73-1.67Z" fill="#BDBDBD"/></svg>
+                <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M1.4 1.4c-1.4 1.41-1.4 3.67-1.4 8.2v.91c0 4.46 0 6.7 1.4 8.09 1.41 1.4 3.67 1.4 8.2 1.4h.91c4.46 0 6.7 0 8.09-1.4 1.4-1.41 1.4-3.67 1.4-8.2v-.91c0-4.46 0-6.7-1.4-8.09-1.41-1.4-3.67-1.4-8.2-1.4h-.91c-4.46 0-6.7 0-8.09 1.4Zm8.62 8.8a3.03 3.03 0 1 0-.01-6.07 3.03 3.03 0 0 0 0 6.07Zm0-4.28a1.25 1.25 0 0 1 0 2.5c-.69 0-1.25-.56-1.25-1.25a1.23 1.23 0 0 1 1.25-1.25Zm1.21 6.76a5.73 5.73 0 0 0 1.76-.72.88.88 0 0 0 .28-1.24.88.88 0 0 0-1.24-.27 3.85 3.85 0 0 1-4.08 0 .9.9 0 0 0-1.23.27.9.9 0 0 0 .3 1.22 5.8 5.8 0 0 0 1.77.72l-1.69 1.69a.89.89 0 0 0 0 1.25c.18.18.4.25.63.25.24 0 .46-.09.64-.25l1.67-1.67 1.67 1.67a.89.89 0 0 0 1.25-1.25l-1.73-1.67Z" fill=""/></svg>
               </a>
             </li>
           </ul>
@@ -530,9 +530,9 @@
 
 
         <div class="footer__copyright ">
-          <a href="" class="footer__copyright-link">Разработано в
+          <a href="#" class="footer__copyright-link">Разработано в
             HTML Academy
-            <svg viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="m11.22 5.75-5.25-3.25-5.19 3.25v-4.34l5.22-.58 5.22.58v4.34Zm0 .58-2.1 1.3-3.14-1.97v.57l2.68 1.68-.46.29-2.22-1.4v.58l1.75 1.1-.41.29h-.01l-1.33-.82v.58l.87.53-.89.56-5.16-3.23 5.17-3.28 5.24 3.22Zm0 5.44-5.22 3.27-5.22-3.27v-4.74l5.2 3.25v.59l-3.56-2.23v.57l3.58 2.26v.6l-3.57-2.23v.57l3.57 2.26 3.6-2.27v-2.44l1.62-1.01v4.82Zm-5.22-11.77-6 .66v11.58l6 3.76 6-3.76v-11.58l-6-.66Z" fill="#BDBDBD"/></svg>
+            <svg viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="m11.22 5.75-5.25-3.25-5.19 3.25v-4.34l5.22-.58 5.22.58v4.34Zm0 .58-2.1 1.3-3.14-1.97v.57l2.68 1.68-.46.29-2.22-1.4v.58l1.75 1.1-.41.29h-.01l-1.33-.82v.58l.87.53-.89.56-5.16-3.23 5.17-3.28 5.24 3.22Zm0 5.44-5.22 3.27-5.22-3.27v-4.74l5.2 3.25v.59l-3.56-2.23v.57l3.58 2.26v.6l-3.57-2.23v.57l3.57 2.26 3.6-2.27v-2.44l1.62-1.01v4.82Zm-5.22-11.77-6 .66v11.58l6 3.76 6-3.76v-11.58l-6-.66Z" fill=""/></svg>
 
             <span class="visually-hidden">Логотип HTML Academy</span>
 

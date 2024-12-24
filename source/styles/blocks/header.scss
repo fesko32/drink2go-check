@@ -2,12 +2,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 12px;
-  padding-bottom: 12px;
+  padding-right: 0;
+
 
   @media (min-width: $tablet-width) {
-    padding-top: 22px;
-    padding-bottom: 22px;
+    padding-top: 0;
+    padding-bottom: 0;
   }
 
   &__info-wrap {

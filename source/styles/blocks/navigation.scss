@@ -3,30 +3,49 @@
   justify-content: flex-end;
   align-items: center;
 
+
   @media (min-width: $tablet-width) {
-    width: 578px;
+    width: 599px;
     justify-content: space-between;
   }
 
   @media (min-width: $desktop-width) {
-    width: 882px;
+    width: 922px;
     justify-content: space-between;
   }
 
   &__toggle {
-    width: 16px;
-    height: 12px;
+    width: 60px;
+    height: 60px;
     border: none;
     background-color: transparent;
+    background-size: 16px 12px;
     background-image: url("../../icons/stack.svg#burger-menu");
     background-position: center;
+    position: relative;
+    z-index: 1000;
+
+
+
+    &--active {
+      background-image: url("../../icons/stack.svg#close");
+      background-size: 16px 16px;
+    }
 
     background-repeat: no-repeat;
     cursor: pointer;
     order: 1;
 
+    &:active {
+      background-color: $base-secondary;
+    }
     @media (min-width: $tablet-width) {
       display: none;
+
+      &--active {
+        display: none;
+      }
+
     }
   }
 
@@ -35,6 +54,40 @@
 
     @media (min-width: $tablet-width) {
       display: flex;
+      flex-direction: row;
+      position: static;
+    }
+
+    &.navigation--open {
+      display: flex; // Для мобильных экранов
+      flex-direction: column;
+      position: absolute;
+      left: 0;
+      top: 60px;
+      z-index: 2;
+      width: 100%;
+
+      .navigation__link {
+        width: 100vw;
+        background-color: $base-white;
+        display: flex;
+        padding: 20px 0;
+        justify-content: center;
+        background-color: $base-white;
+
+        &:active {
+          background-color: $base-secondary;
+        }
+      }
+
+      .navigation__item {
+        display: flex;
+        justify-content: center;
+      }
+    }
+
+    @media (min-width: $tablet-width) {
+      position: static;
 
     }
     @media (min-width: $desktop-width) {
@@ -43,6 +96,7 @@
   }
 
   &__link {
+    display: block;
     font-weight: 500;
     font-size: 12px;
     line-height: 133%;
@@ -51,8 +105,20 @@
     color: $base-black;
     position: relative;
 
+
     @media (min-width: $tablet-width) {
-      padding: 0 20px;
+      padding: 32px 20px;
+
+
+      &:hover, &:focus {
+        color: $base-primary;
+        outline: none;
+      }
+
+      &:active {
+        background-color: $base-secondary;
+        color: $primary-darker;
+      }
     }
 
     &--current {
@@ -62,7 +128,8 @@
         &::after {
           content: '';
           position: absolute;
-          bottom: -32px;
+          bottom: 0;
+          left: 0;
           display: block;
           width: 100%;
           height: 2px;
@@ -75,29 +142,57 @@
 
   &__user-menu {
     display: flex;
-    gap: 44px;
-    margin-right: 44px;
+    align-items: center;
+
+
 
     @media (min-width: $tablet-width) {
 
       margin-right: 22px;
     }
     @media (min-width: $desktop-width) {
-      gap: 61px;
-      margin-right: 20px;
+      gap: 13px;
+      margin-right: 39px;
     }
   }
 
   &__user-button {
     display: block;
-    width: 16px;
-    height: 16px;
     border: none;
     background-color: transparent;
     background-position: center;
     background-size: 16px 16px;
     background-repeat: no-repeat;
     cursor: pointer;
+    color: $base-black;
+    padding: 22px 20px;
+
+    &:hover, &:focus {
+      color: $base-primary;
+      outline: none;
+    }
+
+    &--basket-icon:hover,
+    &--basket-icon:focus {
+      &::before {
+        background-image: url("../../icons/stack.svg#hover-basket");
+      }
+    }
+
+    &--user-icon:hover,
+    &--user-icon:focus {
+      &::before {
+        background-image: url("../../icons/stack.svg#hover-user");
+      }
+    }
+
+    &:active {
+      background-color: $base-secondary;
+    }
+    @media (min-width: $tablet-width) {
+      padding: 32px 22px;
+    }
+
 
     @media (min-width: $desktop-width) {
       width: auto;
@@ -109,6 +204,7 @@
       line-height: 133%;
       letter-spacing: 0.02em;
       text-transform: uppercase;
+
     }
 
     .visually-hidden {
@@ -124,23 +220,46 @@
       }
     }
 
-
-
     &--user-icon {
+      display: inline-flex;
+      gap: 8px;
+
       @media (min-width: $desktop-width) {
         background-position: left;
 
       }
-      background-image: url("../../icons/stack.svg#user");
+      &::before {
+        content: '';
+        display: block;
+        position: relative;
+        width: 16px;
+        height: 16px;
+        background-image: url("../../icons/stack.svg#user");
+      }
     }
+
+
 
     &--basket-icon {
+      display: inline-flex;
+      gap: 8px;
+
       @media (min-width: $desktop-width) {
         background-position: left;
-
       }
-      background-image: url("../../icons/stack.svg#basket");
-      background-position: left;
+      &::before {
+        content: '';
+        display: block;
+        position: relative;
+        width: 16px;
+        height: 16px;
+        background-image: url("../../icons/stack.svg#basket");
+      }
     }
+
+
   }
 }
+
+
+

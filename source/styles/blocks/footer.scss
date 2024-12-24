@@ -76,11 +76,32 @@
   &__header-social-link  {
     display: block;
     padding: 10px;
+    border-radius: 4px;
+
+    &:hover {
+      background-color: $base-secondary;
+      svg {
+        fill: $base-primary;
+      }
+
+    }
+
+    &:focus {
+      background-color: $primary-opacity;
+      svg {
+        fill: $base-primary;
+      }
+    }
 
     svg {
       display: block;
       width: 20px;
       height: 20px;
+      fill: $base-grey;
+
+      &:hover {
+
+      }
     }
   }
 
@@ -251,6 +272,24 @@
     font-size: 12px;
     line-height: 133%;
     color: $base-grey;
+
+    svg {
+      fill: $base-grey;
+    }
+
+    &:hover {
+      color: $base-primary;
+      svg {
+        fill: $base-primary;
+      }
+    }
+
+    &:active {
+      color: $primary-darker;
+      svg {
+        fill: $primary-darker;
+      }
+    }
 
     @media (min-width: $tablet-width) {
       padding-top: 30px;

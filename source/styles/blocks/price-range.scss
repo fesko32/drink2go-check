@@ -61,6 +61,14 @@
   text-align: center;
   font-family: $primary-font;
 
+  &:focus {
+    outline-color: $primary-darker;
+  }
+
+  &:disabled {
+    border-color: $light-grey;
+  }
+
   @media (min-width: $tablet-width) {
     width: 87px;
     height: 40px;

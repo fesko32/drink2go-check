@@ -370,11 +370,42 @@
     border-radius: 4px;
     color: $base-primary;
 
+
+
+    &:hover, &:focus {
+      outline: none;
+      background-color: $primary-lighter;
+      color: $base-white;
+
+      &::before {
+        background-image: url('../../icons/stack.svg#hover-arrow');
+
+
+      }
+    }
+
+    &:active {
+      background-color: $primary-darker;
+    }
+
+    &.disabled {
+      background-color: $light-grey;
+      color: $base-white;
+      cursor: not-allowed;
+      pointer-events: none;
+
+      &::before {
+        background-image: url('../../icons/stack.svg#hover-arrow');
+
+
+      }
+
+    }
     @media (min-width: $tablet-width) {
 
-        width: auto;
-        height: auto;
 
+      width: auto;
+      height: auto;
     }
 
     .catalog__pagination-button-text {
@@ -430,10 +461,29 @@
     color: $base-primary;
     border-radius: 4px;
 
+
+
+    &:hover,&:focus {
+      outline: none;
+      background-color: $primary-lighter;
+      color: $base-white;
+    }
+
+    &:active {
+      background-color: $primary-darker;
+    }
+
     &--current {
       background-color: transparent;
       font-weight: 600;
       color: $base-black;
+      background-color: transparent;
+
+      &:hover,&:focus  {
+        background-color: transparent;
+        color: $base-black
+      }
+
     }
   }
 }

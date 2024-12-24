@@ -5,6 +5,24 @@ const slider = document.getElementById('price-slider');
 const priceMinInput = document.getElementById('price-min');
 const priceMaxInput = document.getElementById('price-max');
 
+document.addEventListener('DOMContentLoaded', () => {
+  const toggleButton = document.querySelector('.navigation__toggle');
+  const menuList = document.querySelector('.navigation__main-list');
+  const navigationOpenClass = 'navigation--open';
+  toggleButton.addEventListener('click', () => {
+    menuList.classList.toggle(navigationOpenClass);
+    toggleButton.classList.toggle('navigation__toggle--active');
+  });
+
+  // Сброс меню при изменении размера окна
+  window.addEventListener('resize', () => {
+    if (window.innerWidth >= 768) {
+      menuList.classList.remove(navigationOpenClass);
+      toggleButton.classList.remove('navigation__toggle--active');
+    }
+  });
+});
+
 // Выбираем элементы
 document.addEventListener('DOMContentLoaded', () => {
   const slides = document.querySelectorAll('.swiper__item');
@@ -121,4 +139,5 @@ slider.noUiSlider.on('update', (values) => {
 
 // Устанавливаем цвет при загрузке
 updateConnectColor(slider.noUiSlider.get());
+
 
