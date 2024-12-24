@@ -1,21 +1,44 @@
 .footer {
 
+  &__container {
+    @media (min-width: $desktop-width) {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: 2fr 70px;
+    }
+  }
+
   &__logo {
     display: block;
-
-
   }
 
   &__header-img {
     display: flex;
 
+    @media (min-width: $tablet-width) {
+      object-fit: cover;
+    }
   }
+
   &__header-wrap {
     padding-top: 20px;
     padding-bottom: 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @media (min-width: $tablet-width) {
+      padding-top: 40px;
+      padding-bottom: 30px;
+    }
+    @media (min-width: $desktop-width) {
+      width: 348px;
+      flex-direction: column;
+      align-items: flex-start;
+      margin: 0;
+      gap: 51px;
+      grid-column: 1 span;
+    }
   }
 
   &__logo-link {
@@ -24,13 +47,23 @@
     justify-content: flex-start;
     gap: 6px;
 
-    span {
+    @media (min-width: $desktop-width) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 9px;
+      padding: 0;
+    }
+
+  }
+
+  &__info-text {
+    display: none;
+
+    @media (min-width: $desktop-width) {
       display: block;
-      font-weight: 800;
-      font-size: 24px;
-      line-height: 100%;
-      letter-spacing: 0.02em;
-      text-transform: uppercase;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 143%;
       color: $base-black;
     }
   }
@@ -49,23 +82,68 @@
       width: 20px;
       height: 20px;
     }
+  }
 
+  &__main-content-wrap {
+
+    @media (min-width: $tablet-width) {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      column-gap: 30px;
+    }
+    @media (min-width: $desktop-width) {
+      width: 1012px;
+      margin: 0;
+      padding: 49px 0 0 0;
+      grid-column: 2 / 5;
+    }
   }
 
   &__list-links {
-    outline: 1px solid $base-secondary;
-
-    &:last-child {
-      outline: 1px solid $base-secondary;
+    @media (min-width: $tablet-width) {
+      &::before, &::after {
+        display: none;
+      }
     }
 
+    position: relative;
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100vw;
+      left: 0;
+      height: 1px;
+      background-color: $base-secondary;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    @media (min-width: $tablet-width) {
+      width: 223px;
+    }
+    @media (min-width: $desktop-width) {
+      width: 317px;
+    }
+
+    &:first-of-type:before {
+      content: '';
+      position: absolute;
+      width: 100vw;
+      left: 50%;
+      height: 1px;
+      background-color: $base-secondary;
+      transform: translateX(-50%);
+    }
   }
-
-
 
   &__item-colomn {
     padding-top: 20px;
     padding-bottom: 20px;
+
+    @media (min-width: $tablet-width) {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
 
   }
 
@@ -75,13 +153,24 @@
     line-height: 143%;
     letter-spacing: 0.02em;
     color: $base-primary;
-    margin-bottom: 12px;
+    margin-bottom: 13px;
+
+
+      @media (min-width: $tablet-width) {
+        margin-bottom: 11px;
+      }
   }
 
   &__sumbmenu {
     display: flex;
     flex-direction: column;
     gap: 4px;
+  }
+
+  &__submenu__item {
+    @media (min-width: $tablet-width) {
+
+    }
   }
 
   &__submenu-link {
@@ -96,11 +185,9 @@
     padding-bottom: 8px;
     position: relative;
 
-
     &--address {
       margin-left: 19px;
-      width: 261px;
-
+      max-width: 261px;
       gap: 6px;
       font-weight: 400;
       font-size: 14px;
@@ -108,6 +195,9 @@
       letter-spacing: normal;
       text-transform: none;
 
+      @media (min-width: $desktop-width) {
+        max-width: 263px;
+      }
 
       &::before {
         content: '';
@@ -135,11 +225,18 @@
         display: flex;
         position: absolute;
         left: -19px;
-
         width: 13px;
         height: 16px;
         background-image: url('../../icons/stack.svg#tell');
       }
+    }
+  }
+
+  &__copyright {
+    @media (min-width: $desktop-width) {
+      grid-column: 1 / -1;
+      grid-row: 2 / 3;
+
     }
   }
 
@@ -155,11 +252,22 @@
     line-height: 133%;
     color: $base-grey;
 
+    @media (min-width: $tablet-width) {
+      padding-top: 30px;
+    }
+    @media (min-width: $desktop-width) {
+      padding-top: 16px;
+    }
+
+
+
     svg {
       width: 12px;
       height: 16px;
     }
   }
+
+
 }
 
 

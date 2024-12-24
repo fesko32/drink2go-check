@@ -2,6 +2,7 @@
   &__img {
     display: block;
   }
+
   &__img-wrap {
     position: relative;
     &::after {
@@ -13,6 +14,16 @@
       top: 43%;
       left: 49%;
       background-image: url('../../icons/stack.svg#map-pin');
+
+      @media (min-width: $tablet-width) {
+        top: 45%;
+        left: 49%;
+        transform: translate(4px, -2px);
+      }
+      @media (min-width: $desktop-width) {
+
+        transform: translate(9px, 1px)
+      }
     }
   }
 

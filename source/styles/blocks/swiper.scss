@@ -1,22 +1,55 @@
 .swiper {
-
   position: relative;
   z-index: 1;
   &__item {
-
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    @media (min-width: $tablet-width) {
+
+      justify-content: center;
+    }
+
+    @media (min-width: $desktop-width) {
+      gap: 19px;
+      flex-direction: row-reverse;
+      align-items: flex-start;
+    }
   }
 
+  &__picture-wrapper {
+    @media (min-width: $tablet-width) {
+      order: 5;
+      margin-top: 20px;
+    }
+    @media (min-width: $desktop-width) {
+      margin-top: 0;
+    }
+  }
 
   &__img {
     display: block;
     margin-bottom: 10px;
+
+    @media (min-width: $tablet-width) {
+
+
+      bottom: 0;
+    }
+
   }
 
   &__label {
     margin-bottom: 4px;
+
+    @media (min-width: $tablet-width) {
+      order: 1;
+    }
+    @media (min-width: $desktop-width) {
+      padding-left: 5px;
+    }
   }
 
   &__title {
@@ -27,12 +60,30 @@
     text-align: center;
     color: $base-black;
     margin-bottom: 10px;
+
+    @media (min-width: $tablet-width) {
+      font-size: 56px;
+      line-height: 143%;
+      order: 2;
+      margin-bottom: 16px;
+    }
+    @media (min-width: $desktop-width) {
+      padding-left: 5px;
+    }
+
+
   }
 
   &__data-wrap {
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    @media (min-width: $desktop-width) {
+      align-items: flex-start;
+      margin-left: 7px;
+      padding-top: 150px;
+    }
   }
 
   &__paragraph {
@@ -40,18 +91,62 @@
     text-align: center;
     color: $base-black;
 
+    @media (min-width: $tablet-width) {
+      width: 606px;
+      font-size: 20px;
+      line-height: 160%;
+      order: 3;
+    }
+    @media (min-width: $desktop-width) {
+      text-align: left;
+      margin: 0 0 40px 0;
+      padding-left: 5px;
+    }
+
   }
 
   &__bottom-wrap {
     display: flex;
     align-items: center;
     gap: 20px;
+
+    @media (min-width: $tablet-width) {
+      order: 4;
+
+    }
+
+  }
+
+  &__pagination-wrap {
+    @media (min-width: $desktop-width) {
+      display: flex;
+      position: absolute;
+      left: 43%;
+      order: 4;
+      gap: 8px;
+
+      .swiper__pagination {
+        @media (min-width: $desktop-width) {
+          display: block;
+          width: 62px;
+          height: 4px;
+          background-color: $base-white;
+        }
+
+      }
+    }
   }
 
   &__price-wrap {
     display: flex;
     align-items: center;
     gap: 6px;
+
+    @media (min-width: $desktop-width) {
+      padding-left: 7px;
+
+    }
+
   }
 
   &__price-old {
@@ -77,26 +172,80 @@
     width: 100%;
     height: 100%;
     z-index: 0;
+
+    @media (min-width: $tablet-width) {
+
+      height: 75%;
+
+
+    }
+    @media (min-width: $desktop-width) {
+
+
+    }
   }
 
   &__button {
     border: none;
     background-color: transparent;
     background-repeat: no-repeat;
-    width: 11px;
+    width: 20px;
+    cursor: pointer;
 
-    &--prev {
-      background-image: url('../../icons/stack.svg#arrow');
-
-      margin-left: 4px;
-
+    @media (min-width: $tablet-width) {
+      width: 80px;
     }
 
+    &--prev::after {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 20px;
+      left: 0;
+      top:49%;
+      height: 20px;
+      background-image: url('../../icons/stack.svg#arrow');
 
-    &--next {
+
+
+    @media (min-width: $tablet-width) {
+
+        left: 28px;
+      }
+    }
+
+    &--next::after {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 20px;
+      height: 20px;
       background-image: url('../../icons/stack.svg#arrow');
       transform: rotate(180deg);
       margin-right: 4px;
+      right: -4px;
+      top:49%;
+
+      @media (min-width: $tablet-width) {
+
+          right: 25px;
+      }
     }
   }
+}
+
+
+
+.swiper__item {
+  display: none;
+  transition: opacity 0.5s;
+}
+.swiper__item.active {
+  display: flex;
+  opacity: 1;
+}
+
+
+.swiper__pagination.active {
+  background: $base-primary;
 }

@@ -5,6 +5,29 @@
   padding-top: 12px;
   padding-bottom: 12px;
 
+  @media (min-width: $tablet-width) {
+    padding-top: 22px;
+    padding-bottom: 22px;
+  }
+
+  &__info-wrap {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+  }
+
+  &__info-text {
+    display: none;
+    width: 126px;
+    font-size: 12px;
+    line-height: 133%;
+
+    @media (min-width: $desktop-width) {
+      display: block;
+    }
+  }
+
   &__logo-img {
     display: block;
     object-fit: cover;

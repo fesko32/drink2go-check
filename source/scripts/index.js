@@ -5,6 +5,58 @@ const slider = document.getElementById('price-slider');
 const priceMinInput = document.getElementById('price-min');
 const priceMaxInput = document.getElementById('price-max');
 
+// Выбираем элементы
+document.addEventListener('DOMContentLoaded', () => {
+  const slides = document.querySelectorAll('.swiper__item');
+  const paginations = document.querySelectorAll('.swiper__pagination');
+  const prevButton = document.querySelector('.swiper__button--prev');
+  const nextButton = document.querySelector('.swiper__button--next');
+  let currentIndex = 0;
+
+  // Функция обновления состояния слайдов и кнопок
+  function updateSlider(index) {
+    slides.forEach((slide, i) => {
+      slide.classList.toggle('active', i === index);
+    });
+    paginations.forEach((pagination, i) => {
+      pagination.classList.toggle('active', i === index);
+    });
+
+    // Обновляем состояние кнопок
+    prevButton.disabled = index === 0; // Блокируем кнопку "Назад" на первом слайде
+    nextButton.disabled = index === slides.length - 1; // Блокируем кнопку "Вперед" на последнем слайде
+  }
+
+  // Функция переключения на следующий слайд
+  function showNextSlide() {
+    if (currentIndex < slides.length - 1) {
+      currentIndex++;
+      updateSlider(currentIndex);
+    }
+  }
+
+  // Функция переключения на предыдущий слайд
+  function showPrevSlide() {
+    if (currentIndex > 0) {
+      currentIndex--;
+      updateSlider(currentIndex);
+    }
+  }
+
+  // Добавляем обработчики событий
+  nextButton.addEventListener('click', showNextSlide);
+  prevButton.addEventListener('click', showPrevSlide);
+  paginations.forEach((pagination, index) => {
+    pagination.addEventListener('click', () => {
+      currentIndex = index;
+      updateSlider(currentIndex);
+    });
+  });
+
+  // Инициализация
+  updateSlider(currentIndex);
+});
+
 
 select.addEventListener('mousedown', () => {
   selectWrap.classList.add('active');
@@ -69,3 +121,4 @@ slider.noUiSlider.on('update', (values) => {
 
 // Устанавливаем цвет при загрузке
 updateConnectColor(slider.noUiSlider.get());
+

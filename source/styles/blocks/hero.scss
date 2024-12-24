@@ -1,6 +1,17 @@
 .hero {
   background-color: $flat-white;
 
+
+  @media (min-width: $tablet-width) {
+    background: linear-gradient(#f3ebe1 640px, #fff 56%);
+  }
+
+  @media (min-width: $desktop-width) {
+    background: linear-gradient(#f3ebe1 714px, #fff 56%);
+  }
+
+
+
   &__item {
     display: flex;
   }
@@ -8,5 +19,14 @@
   &__list {
     padding-top: 20px;
     padding-bottom: 60px;
+
+    @media (min-width: $tablet-width) {
+      padding-top: 60px;
+      padding-bottom: 0;
+    }
+    @media (min-width: $desktop-width) {
+      padding-top: 30px;
+      padding-bottom: 73px;
+    }
   }
 }

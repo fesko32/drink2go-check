@@ -2,6 +2,14 @@
   text-align: center;
   padding-top: 50px;
   padding-bottom: 60px;
+  @media (min-width: $tablet-width) {
+
+    padding-bottom: 0px;
+  }
+  @media (min-width: $desktop-width) {
+
+    padding-top: 100px;
+  }
 
   &__label {
     margin-bottom: 4px;
@@ -11,25 +19,103 @@
     display: flex;
     flex-direction: column;
     gap: 32px;
+
+    @media (min-width: $tablet-width) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 20px;
+      row-gap: 50px;
+      padding-left: 10px;
+      margin-bottom: 100px;
+    }
+
+    @media (min-width: $desktop-width) {
+      grid-template-columns: repeat(4,1fr);
+      column-gap: 30px;
+      padding-left: 0;
+      margin-bottom: 120px;
+    }
+  }
+
+  &__item {
+    @media (min-width: $tablet-width) {
+      display: flex;
+      align-items: flex-start;
+      flex-direction: row;
+      gap: 20px;
+    }
+    @media (min-width: $desktop-width) {
+      display: block;
+      flex-direction: column;
+
+    }
+  }
+
+  &__data {
+
+    @media (min-width: $tablet-width) {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    @media (min-width: $desktop-width) {
+      align-items: center;
+    }
+
+
   }
 
   &__title {
     font-size: 24px;
     line-height: 150%;
     margin-bottom: 36px;
+
+    @media (min-width: $tablet-width) {
+      font-size: 42px;
+      line-height: 152%;
+      margin-bottom: 60px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-bottom: 80px;
+    }
   }
 
   &__subtitle {
     margin-bottom: 4px;
     font-size: 18px;
     line-height: 178%;
+
+    @media (min-width: $tablet-width) {
+      font-size: 24px;
+      line-height: 150%;
+      margin-bottom: 10px;
+    }
   }
 
-  &__item {
+  &__paragraph {
+
+
+    @media (min-width: $tablet-width) {
+      text-align: left;
+      font-size: 16px;
+      line-height: 150%;
+    }
+    @media (min-width: $desktop-width) {
+      text-align: center;
+    }
+  }
+
+  &__img {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+
+    @media (min-width: $tablet-width) {
+
+    }
+
 
     &::before {
       position: relative;
@@ -37,10 +123,21 @@
       width: 52px;
       height: 56px;
       margin-bottom: 10px;
+      @media (min-width: $tablet-width) {
+        left: 0;
+        top: 0;
+      }
+
+      @media (min-width: $desktop-width) {
+        margin-bottom: 22px;
+      }
     }
 
     &--clock-svg::before  {
+      @media (min-width: $tablet-width) {
 
+        top: 4px;
+      }
       background-image: url("../../icons/stack.svg#clock");
     }
 
@@ -53,6 +150,11 @@
     }
 
     &--sheet-svg::before {
+
+      @media (min-width: $tablet-width) {
+
+        top: 4px;
+      }
       background-image: url("../../icons/stack.svg#sheet");
     }
   }

@@ -3,6 +3,16 @@
   justify-content: flex-end;
   align-items: center;
 
+  @media (min-width: $tablet-width) {
+    width: 578px;
+    justify-content: space-between;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 882px;
+    justify-content: space-between;
+  }
+
   &__toggle {
     width: 16px;
     height: 12px;
@@ -14,19 +24,72 @@
     background-repeat: no-repeat;
     cursor: pointer;
     order: 1;
+
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
   }
 
   &__main-list {
     display: none;
+
+    @media (min-width: $tablet-width) {
+      display: flex;
+
+    }
+    @media (min-width: $desktop-width) {
+      gap: 20px;
+    }
+  }
+
+  &__link {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 133%;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: $base-black;
+    position: relative;
+
+    @media (min-width: $tablet-width) {
+      padding: 0 20px;
+    }
+
+    &--current {
+      @media (min-width: $tablet-width) {
+        color: $base-primary;
+
+        &::after {
+          content: '';
+          position: absolute;
+          bottom: -32px;
+          display: block;
+          width: 100%;
+          height: 2px;
+          background-color: $base-primary;
+        }
+      }
+
+    }
   }
 
   &__user-menu {
     display: flex;
     gap: 44px;
     margin-right: 44px;
+
+    @media (min-width: $tablet-width) {
+
+      margin-right: 22px;
+    }
+    @media (min-width: $desktop-width) {
+      gap: 61px;
+      margin-right: 20px;
+    }
   }
 
   &__user-button {
+    display: block;
     width: 16px;
     height: 16px;
     border: none;
@@ -36,12 +99,48 @@
     background-repeat: no-repeat;
     cursor: pointer;
 
+    @media (min-width: $desktop-width) {
+      width: auto;
+      height: auto;
+      padding-left: 24px;
+      display: block;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 133%;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+    }
+
+    .visually-hidden {
+      @media (min-width: $desktop-width) {
+        display: block;
+        position: static;
+        width: auto;
+        height: auto;
+        margin: 0;
+        clip: auto;
+        overflow: visible;
+
+      }
+    }
+
+
+
     &--user-icon {
+      @media (min-width: $desktop-width) {
+        background-position: left;
+
+      }
       background-image: url("../../icons/stack.svg#user");
     }
 
     &--basket-icon {
+      @media (min-width: $desktop-width) {
+        background-position: left;
+
+      }
       background-image: url("../../icons/stack.svg#basket");
+      background-position: left;
     }
   }
 }

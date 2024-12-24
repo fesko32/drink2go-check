@@ -2,9 +2,30 @@
   background-color: $lightest-grey;
   padding-top: 50px;
 
+  &__container {
+    @media (min-width: $desktop-width) {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      column-gap: 28px;
+
+    }
+  }
+  @media (min-width: $tablet-width) {
+    padding-top: 80px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 100px;
+  }
+
+
 
   &__label {
     margin-bottom: 4px;
+
+    @media (min-width: $desktop-width) {
+      grid-column: 4 span;
+    }
   }
 
   &__title {
@@ -12,6 +33,31 @@
     line-height: 150%;
     text-align: center;
     margin-bottom: 20px;
+
+    @media (min-width: $tablet-width) {
+      font-size: 42px;
+      line-height: 152%;
+      text-align: center;
+    }
+    @media (min-width: $desktop-width) {
+      grid-column: 4 span;
+      margin-bottom: 36px;
+    }
+  }
+
+  &__form-element-wrap {
+
+    @media (min-width: $tablet-width) {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      column-gap: 30px;
+    }
+    @media (min-width: $desktop-width) {
+
+      grid-template-columns: repeat(1, 1fr);
+
+    }
+
   }
 
   &__wrap {
@@ -19,6 +65,17 @@
     margin: 0;
     padding: 0;
     margin-bottom: 30px;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 41px;
+    }
+    @media (min-width: $desktop-width) {
+      margin-bottom: 30px;
+
+      &:last-of-type {
+        margin-bottom: 40px;
+      }
+    }
   }
 
   &__subtitle {
@@ -37,14 +94,54 @@
 
 
   &__form {
-    margin-bottom: 42px;
+    margin-bottom: 41px;
 
+    @media (min-width: $desktop-width) {
+      padding: 3px 0 0 0;
+      width: 320px;
+      grid-column: 1 / 2;
+    }
+  }
+
+  &__sort-wrap {
+    @media (min-width: $desktop-width) {
+      width: 1010px;
+      padding: 0;
+      grid-column: 2 / 5;
+
+    }
   }
 
   &__form-buttom-wrap {
     display: flex;
     flex-direction: column;
     gap: 20px;
+
+    @media (min-width: $tablet-width) {
+      flex-direction: row;
+      justify-content: center;
+
+    }
+    @media (min-width: $desktop-width) {
+      justify-content: space-between;
+      gap: 23px;
+    }
+  }
+
+  &__form-button {
+    @media (min-width: $desktop-width) {
+      padding: 8px 27px;
+
+    }
+
+    &--reset {
+      @media (min-width: $desktop-width) {
+        padding: 8px 34px;
+
+      }
+    }
+
+
   }
 
   &__form-button--reset  {
@@ -66,7 +163,6 @@
   &__sort-label {
     font-weight: 600;
     padding-left: 4px;
-    margin-top: 5px;
     font-size: 16px;
     line-height: 150%;
     color: $base-black;
@@ -77,11 +173,12 @@
     position: relative;
     display: inline-flex;
 
+
     &::after {
       content: '';
       position: absolute;
-      top: 10px;
-      right: 0;
+      top: 11px;
+      right: 7px;
       display: block;
       width: 10px;
       height: 10px;
@@ -101,9 +198,11 @@
     font-size: 16px;
     line-height: 150%;
     color: $base-primary;
-    padding: 4px 20px 4px 10px;
+    padding: 4px 25px 4px 10px;
     appearance: none;
     font-family: $primary-font;
+    border-radius: 4px;
+
 
     &:hover,&:focus {
       background-color: $base-secondary;
@@ -115,6 +214,17 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
+
+    @media (min-width: $tablet-width) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+    }
+
+    @media (min-width: $desktop-width) {
+      grid-template-columns: repeat(3, 1fr);
+      padding-top: 5px;
+    }
   }
 
   &__cart-item {
@@ -122,6 +232,19 @@
     min-height: 420px;
     background-color: $base-white;
     padding: 40px 20px 20px 18px;
+
+    &:hover {
+      box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.15);
+    }
+
+    @media (min-width: $tablet-width) {
+     padding: 50px 30px 30px 28px;
+     width: 349px;
+     min-height: 440px;
+    }
+    @media (min-width: $desktop-width) {
+      width: 317px;
+    }
   }
 
   &__cart-img {
@@ -130,6 +253,9 @@
     width: 130px;
     height: 188px;
 
+    @media (min-width: $tablet-width) {
+      margin-bottom: 30px;
+     }
   }
 
   &__cart-title {
@@ -138,6 +264,16 @@
     line-height: 178%;
     color: $base-black;
     margin-bottom: 4px;
+
+    @media (min-width: $tablet-width) {
+      font-size: 24px;
+      line-height: 150%;
+      margin-bottom: 10px;
+     }
+
+    @media (min-width: $desktop-width) {
+      padding-top: 1px;
+     }
   }
 
   &__cart-paragraph {
@@ -146,6 +282,10 @@
     line-height: 143%;
     color: $base-black;
     margin-bottom: 16px;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 20px;
+     }
   }
 
   &__price-wrap {
@@ -180,14 +320,38 @@
   &__sort-header-wrap {
     display: flex;
     gap: 10px;
-    margin-bottom: 16px;
+    margin-bottom: 17px;
+    align-items: center;
+
+    @media (min-width: $tablet-width) {
+      justify-content: flex-end;
+      margin-right: 5px;
+      margin-bottom: 25px;
+    }
+
+    @media (min-width: $desktop-width) {
+      gap: 12px;
+      margin-right: 3px;
+      margin-bottom: 19px;
+    }
   }
 
   &__pagination-wrap {
     display: flex;
     padding-top: 40px;
-    padding-bottom: 44px;
+    padding-bottom: 42px;
     gap: 20px;
+
+    @media (min-width: $tablet-width) {
+      padding-top: 70px;
+      padding-bottom: 90px;
+      justify-content: flex-end;
+    }
+    @media (min-width: $desktop-width) {
+      padding-top: 60px;
+      padding-bottom: 120px;
+      justify-content: flex-end;
+    }
   }
 
   &__pagination-list {
@@ -203,6 +367,31 @@
     align-items: center;
     justify-content: center;
     background-color: $base-white;
+    border-radius: 4px;
+    color: $base-primary;
+
+    @media (min-width: $tablet-width) {
+
+        width: auto;
+        height: auto;
+
+    }
+
+    .catalog__pagination-button-text {
+       overflow: hidden;
+       display: none;
+    }
+
+    @media (min-width: $tablet-width) {
+      .catalog__pagination-button-text {
+        width: auto;
+        height: auto;
+        display: block;
+        padding: 8px 20px;
+        font-size: 16px;
+        line-height: 150%;
+      }
+    }
 
 
     &::before {
@@ -213,6 +402,12 @@
       top: -1px;
       position: relative;
       background-image: url('../../icons/stack.svg#pagination-arrow');
+
+      @media (min-width: $tablet-width) {
+
+          display: none;
+
+      }
     }
 
     &--next::before  {
@@ -233,6 +428,7 @@
     line-height: 150%;
     background-color: $base-white;
     color: $base-primary;
+    border-radius: 4px;
 
     &--current {
       background-color: transparent;

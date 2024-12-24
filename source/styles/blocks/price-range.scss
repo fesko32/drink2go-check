@@ -9,6 +9,15 @@
 .price-range {
   text-align: center;
   margin-top: 11px;
+
+  @media (min-width: $tablet-width) {
+    width: 223px;
+    margin-top: 12px;
+  }
+  @media (min-width: $desktop-width) {
+    width: 320px;
+
+  }
 }
 
 .price-values {
@@ -18,6 +27,25 @@
   justify-content: space-between;
   gap: 10px;
   margin-top: 35px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 31px;
+  }
+  @media (min-width: $desktop-width) {
+    margin-top: 32px;
+    gap: 20px;
+  }
+}
+
+.price__element {
+
+  display: block;
+  width: 8px;
+  height: 2px;
+  top: 1px;
+  background-color: $base-grey;
+  position: relative;
+
 }
 
 .price-inpun {
@@ -33,7 +61,14 @@
   text-align: center;
   font-family: $primary-font;
 
-
+  @media (min-width: $tablet-width) {
+    width: 87px;
+    height: 40px;
+  }
+  @media (min-width: $desktop-width) {
+    width: 134px;
+    height: 40px;
+  }
 }
 
 
@@ -57,6 +92,13 @@
 
 #price-slider .noUi-handle-upper {
   right: -9px;
+
+  @media (min-width: $tablet-width) {
+    right: -1px;
+  }
+  @media (min-width: $desktop-width) {
+    right: -10px;
+  }
 }
 
 #price-slider .noUi-connects {
@@ -71,6 +113,13 @@
   width: 280px;
   left: 0;
   background-color: $primary-lighter;
+
+  @media (min-width: $tablet-width) {
+    width: 223px;
+  }
+  @media (min-width: $desktop-width) {
+    width: 310px;
+  }
 }
 
 
@@ -81,5 +130,3 @@
   position: static;
   z-index: 1
 }
-
-
