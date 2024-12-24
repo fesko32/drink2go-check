@@ -7,14 +7,15 @@
     <link rel="preload" href="fonts/Montserrat-Regular.woff2" type="font/woff2" as="font">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.0/nouislider.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.0/nouislider.min.js"></script>
+
     <link rel="stylesheet" href="styles/styles.css">
     <script src="scripts/index.js" defer></script>
   </head>
   <body class="page__body">
     <header class="header container" data-test="header">
       <div class="header__info-wrap">
-        <a href="#" class="header__logo">
+        <a class="header__logo" href="#">
+          <span class="visually-hidden">Логотип</span>
           <picture>
             <source media="(min-width: 1440px)" width="170" height="36" type="image/svg+xml" srcset="icons/stack.svg#main-logo-desktop">
             <source media="(min-width: 768px)" width="82" height="36" type="image/svg+xml" srcset="icons/stack.svg#main-logo-tablet">
@@ -29,34 +30,34 @@
 
 
       <nav class="navigation">
-        <button class="navigation__toggle js-toggle-button">
+        <button class="navigation__toggle js-toggle-button" type="button">
           <span class="visually-hidden">Бургер меню</span>
         </button>
         <ul class="navigation__main-list">
           <li class="navigation__item">
-            <a href="" class="navigation__link navigation__link--current">Главная</a>
+            <a class="navigation__link navigation__link--current" href="#" >Главная</a>
           </li>
           <li class="navigation__item">
-            <a href="#catalog" class="navigation__link">Каталог</a>
+            <a class="navigation__link" href="#catalog">Каталог</a>
           </li>
           <li class="navigation__item">
-            <a href="" class="navigation__link">Доставка</a>
+            <a class="navigation__link" href="#">Доставка</a>
           </li>
           <li class="navigation__item">
-            <a href="" class="navigation__link">О нас</a>
+            <a class="navigation__link" href="#" >О нас</a>
           </li>
         </ul>
 
         <ul class="navigation__user-menu">
           <li class="navigation__user-item">
-            <a href="#" class="navigation__user-button navigation__user-button--user-icon" type="button">
+            <a class="navigation__user-button navigation__user-button--user-icon" href="#">
               <span class="visually-hidden">
                 Войти
               </span>
             </a>
           </li>
           <li class="navigation__user-item">
-            <a href="#" class="navigation__user-button navigation__user-button--basket-icon" type="button">
+            <a class="navigation__user-button navigation__user-button--basket-icon" href="#">
               <span class="visually-hidden">
                 Корзина
               </span>
@@ -68,13 +69,16 @@
     <main class="main-content">
       <h1 class="visually-hidden">Интернет магазин Drink GO</h1>
       <section class="hero" data-test="hero">
-        <ul class="hero__list swiper swiper__wrap">
+        <ul class="hero__list swiper">
           <li class="swiper__item container">
             <div class="swiper__picture-wrapper">
               <picture>
-                <source media="(min-width: 1440px)" width="600" height="600" type="image/png" srcset="images/slider-can-coffee/flat-white-img-desktop@1x.png">
-                <source media="(min-width: 768px)" width="476" height="476" type="image/png" srcset="images/slider-can-coffee/flat-white-img-tablet@1x.png">
-                <img class="swiper__img" src="images/slider-can-coffee/flat-white-img-mobile@1x.png" width="280" height="280" alt="Эспрессо">
+                <source media="(min-width: 1440px)" width="600" height="600" type="image/webp" srcset="images/slider-can-coffee/lavender-img-desktop@1x.webp">
+                <source media="(min-width: 768px)" width="476" height="476" type="image/webp" srcset="images/slider-can-coffee/lavender-img-tablet@1x.webp">
+                <source type="image/webp" srcset="images/slider-can-coffee/lavender-img-mobile@1x.png, images/slider-can-coffee/lavender-img-mobile@2x.png 2x" width="280" height="270">
+                <source media="(min-width: 1440px)" width="600" height="600" type="image/png" srcset="images/slider-can-coffee/lavender-img-desktop@1x.png">
+                <source media="(min-width: 768px)" width="476" height="476" type="image/png" srcset="images/slider-can-coffee/lavender-img-tablet@1x.png">
+                <img class="swiper__img" src="images/slider-can-coffee/lavender-img--mobile@1x.png" width="280" height="280" alt="Лаванда">
               </picture>
             </div>
             <div class="swiper__data-wrap">
@@ -87,7 +91,7 @@
                     <span class="swiper__price-old">295₽</span>
                     <span class="swiper__price-new">225₽</span>
                   </div>
-                  <a href="#" class="button">Заказать</a>
+                  <a class="button" href="#">Заказать</a>
                 </div>
               </div>
           </li>
@@ -95,9 +99,12 @@
           <li class="swiper__item container">
             <div class="swiper__picture-wrapper">
               <picture>
-                <source media="(min-width: 1440px)" width="600" height="600" type="image/png" srcset="images/slider-can-coffee/lavender-img-desktop@1x.png">
-                <source media="(min-width: 768px)" width="476" height="476" type="image/png" srcset="images/slider-can-coffee/lavender-img-tablet@1x.png">
-                <img class="swiper__img" src="images/slider-can-coffee/lavender-img-mobile@1x.png" width="280" height="280" alt="Эспрессо">
+                <source media="(min-width: 1440px)" width="600" height="600" type="image/webp" srcset="images/slider-can-coffee/flat-white-img-desktop@1x.webp">
+                <source media="(min-width: 768px)" width="476" height="476" type="image/webp" srcset="images/slider-can-coffee/flat-white-img-tablet@1x.webp">
+                <source type="image/webp" srcset="images/slider-can-coffee/flat-white-img-mobile@1x.png, images/slider-can-coffee/flat-white-img-mobile@2x.png 2x" width="280" height="270">
+                <source media="(min-width: 1440px)" width="600" height="600" type="image/png" srcset="images/slider-can-coffee/flat-white-img-desktop@1x.png">
+                <source media="(min-width: 768px)" width="476" height="476" type="image/png" srcset="images/slider-can-coffee/flat-white-img-tablet@1x.png">
+                <img class="swiper__img" src="images/slider-can-coffee/flat-white-img-mobile@1x.png" width="280" height="280" alt="Флэт">
               </picture>
             </div>
             <div class="swiper__data-wrap">
@@ -110,7 +117,7 @@
                     <span class="swiper__price-old">285₽</span>
                     <span class="swiper__price-new">265₽</span>
                   </div>
-                  <a href="#" class="button">Заказать</a>
+                  <a class="button" href="#">Заказать</a>
                 </div>
 
 
@@ -119,9 +126,12 @@
           <li class="swiper__item container">
             <div class="swiper__picture-wrapper">
               <picture>
+                <source media="(min-width: 1440px)" width="600" height="600" type="image/webp" srcset="images/slider-can-coffee/espresso-tablet@1x.webp">
+                <source media="(min-width: 768px)" width="476" height="476" type="image/webp" srcset="images/slider-can-coffee/espresso-tablet@1x.webp">
+                <source type="image/webp" srcset="images/slider-can-coffee/espresso-img-mobile@1x.png, images/slider-can-coffee/espresso-img-mobile@2x.png 2x" width="280" height="270">
                 <source media="(min-width: 1440px)" width="600" height="600" type="image/png" srcset="images/slider-can-coffee/espresso-desktop@1x.png">
                 <source media="(min-width: 768px)" width="476" height="476" type="image/png" srcset="images/slider-can-coffee/espresso-tablet@1x.png">
-                <img class="swiper__img" src="images/slider-can-coffee/espresso-mobile@1x.png" width="280" height="280" alt="Эспрессо">
+                <img class="swiper__img" src="images/slider-can-coffee/lavender-img-mobile@1x.png" width="280" height="280" alt="Эспрессо">
               </picture>
             </div>
             <div class="swiper__data-wrap">
@@ -134,23 +144,23 @@
                     <span class="swiper__price-old">295₽</span>
                     <span class="swiper__price-new">275₽</span>
                   </div>
-                  <a href="#" class="button">Заказать</a>
+                  <a class="button" href="#">Заказать</a>
                 </div>
 
 
               </div>
           </li>
 
-            <ul class="swiper__pagination-wrap slider-pagination">
-              <li class="swiper__pagination"></li>
-              <li class="swiper__pagination"></li>
-              <li class="swiper__pagination"></li>
-            </ul>
+            <li class="swiper__pagination-wrap slider-pagination">
+              <div class="swiper__pagination"></div>
+              <div class="swiper__pagination"></div>
+              <div class="swiper__pagination"></div>
+            </li>
             <li class="swiper__button-wrap">
-              <button class="swiper__button swiper__button--prev slider-button-prev">
+              <button class="swiper__button swiper__button--prev slider-button-prev" type="button">
                 <span class="visually-hidden">Предыдущий слайд</span>
               </button>
-              <button class="swiper__button swiper__button--next slider-button-next">
+              <button class="swiper__button swiper__button--next slider-button-next" type="button">
                 <span class="visually-hidden">Следующий слайд</span>
               </button>
             </li>
@@ -206,7 +216,7 @@
             <div class="catalog__form-element-wrap">
               <fieldset class="catalog__wrap">
                 <legend class="catalog__subtitle">Цена</legend>
-                <div class="price-range">
+                <div class="price-range price">
                   <div id="price-slider"></div>
                   <div class="price-values">
                     <label class="visually-hidden" for="price-min">Минимальная цена:</label>
@@ -220,27 +230,27 @@
               <fieldset class="catalog__wrap">
                 <legend class="catalog__subtitle">Наличие молока</legend>
                 <ul class="catalog__checkbox-list">
-                  <li class="catalog__checkbox-item">
+                  <li class="catalog__checkbox-item radio">
                     <label class="radio radio__label" >
-                    <input class="radio__input visually-hidden" name="milk-group" value="no-matter" type='radio'>
+                    <input class="radio__input visually-hidden" name="milk-group" value="no-matter" type="radio">
                     <span class="radio__element">Неважно</span>
                   </label>
                   </li>
-                  <li class="catalog__checkbox-item">
+                  <li class="catalog__checkbox-item radio">
                     <label class="radio radio__label" >
-                    <input class="radio__input visually-hidden" name="milk-group" value="only-an-animal" type='radio'>
+                    <input class="radio__input visually-hidden" name="milk-group" value="only-an-animal" type="radio">
                     <span class="radio__element">Только животное</span>
                   </label>
                   </li>
-                  <li class="catalog__checkbox-item">
+                  <li class="catalog__checkbox-item radio">
                     <label class="radio radio__label" >
-                    <input class="radio__input visually-hidden" name="milk-group" value="only-vegetable" type='radio'>
+                    <input class="radio__input visually-hidden" name="milk-group" value="only-vegetable" type="radio">
                     <span class="radio__element">Только растительное</span>
                   </label>
                   </li>
-                  <li class="catalog__checkbox-item">
+                  <li class="catalog__checkbox-item radio">
                     <label class="radio radio__label">
-                    <input class="radio__input visually-hidden" name="milk-group" value="without-milk" type='radio'>
+                    <input class="radio__input visually-hidden" name="milk-group" value="without-milk" type="radio">
                     <span class="radio__element">Без молока</span>
                   </label>
                   </li>
@@ -303,114 +313,114 @@
 
             <ul class="catalog__cart-list">
               <li class="catalog__cart-item">
-                <a href="#" class="catalog__cart-link-img">
+                <a class="catalog__cart-link-img" href="#">
                   <picture>
-                    <source type="image/webp" srcset="images/can-coffee-1@1x.webp, images/can-coffee-1@2x.webp" width="130" height="188" alt="Coffe">
+                    <source type="image/webp" srcset="images/can-coffee-1@1x.webp" width="130" height="188">
                     <img class="catalog__cart-img" src="images/can-coffee-1@1x.png" srcset="images/can-coffee-1@2x.png" width="130" height="188" alt="Coffe">
                   </picture>
                 </a>
-                <a href="#" class="catalog__cart-title-link">
+                <a class="catalog__cart-title-link" href="#">
                   <h3 class="catalog__cart-title">Декаф Флэт Уайт</h3>
                 </a>
                 <p class="catalog__cart-paragraph">Кофе без кофеина из&nbsp;Эфиопии
                   с&nbsp;натуральным фермерским молоком</p>
                 <div class="catalog__price-wrap">
                   <span class="catalog__price">225₽</span>
-                 <a href ="#" class="catalog__cart-button button">В корзину</a>
+                 <a class="catalog__cart-button button" href="#">В корзину</a>
                 </div>
               </li>
               <li class="catalog__cart-item">
-                <a href="#" class="catalog__cart-link-img">
+                <a class="catalog__cart-link-img" href="#">
                   <picture>
-                    <source type="image/webp" srcset="images/can-coffee-2@1x.webp, images/can-coffee-2@2x.webp" width="130" height="188" alt="Coffe">
+                    <source type="image/webp" srcset="images/can-coffee-2@1x.webp" width="130" height="188">
                     <img class="catalog__cart-img" src="images/can-coffee-2@1x.png" srcset="images/can-coffee-2@2x.png" width="130" height="188" alt="Coffe">
                   </picture>
                 </a>
-                <a href="#" class="catalog__cart-title-link">
+                <a class="catalog__cart-title-link" href="#">
                   <h3 class="catalog__cart-title">Декаф Флэт Уайт</h3>
                 </a>
                 <p class="catalog__cart-paragraph">Кофе без кофеина из&nbsp;Эфиопии
                   с&nbsp;натуральным фермерским молоком</p>
                 <div class="catalog__price-wrap">
                   <span class="catalog__price">225₽</span>
-                  <button class="catalog__cart-button button">В&nbsp;корзину</button>
+                  <a class="catalog__cart-button button" href="#">В&nbsp;корзину</a>
                 </div>
               </li>
               <li class="catalog__cart-item">
-                <a href="#" class="catalog__cart-link-img">
+                <a class="catalog__cart-link-img" href="#">
                   <picture>
-                    <source type="image/webp" srcset="images/can-coffee-3@1x.webp, images/can-coffee-3@2x.webp" width="130" height="188" alt="Coffe">
+                    <source type="image/webp" srcset="images/can-coffee-3@1x.webp" width="130" height="188">
                     <img class="catalog__cart-img" src="images/can-coffee-3@1x.png" srcset="images/can-coffee-3@2x.png" width="130" height="188" alt="Coffe">
                   </picture>
                 </a>
-                <a href="#" class="catalog__cart-title-link">
+                <a class="catalog__cart-title-link" href="#">
                   <h3 class="catalog__cart-title">Декаф Флэт Уайт</h3>
                 </a>
                 <p class="catalog__cart-paragraph">Кофе без кофеина из&nbsp;Эфиопии
                   с&nbsp;натуральным фермерским молоком</p>
                 <div class="catalog__price-wrap">
                   <span class="catalog__price">225₽</span>
-                 <a href ="#" class="catalog__cart-button button">В корзину</a>
+                 <a class="catalog__cart-button button" href="#">В корзину</a>
                 </div>
               </li>
               <li class="catalog__cart-item">
-                <a href="#" class="catalog__cart-link-img">
+                <a class="catalog__cart-link-img" href="#">
                   <picture>
-                    <source type="image/webp" srcset="images/can-coffee-4@1x.webp, images/can-coffee-4@2x.webp" width="130" height="188" alt="Coffe">
+                    <source type="image/webp" srcset="images/can-coffee-4@1x.webp" width="130" height="188">
                     <img class="catalog__cart-img" src="images/can-coffee-4@1x.png" srcset="images/can-coffee-4@2x.png" width="130" height="188" alt="Coffe">
                   </picture>
                 </a>
-                <a href="#" class="catalog__cart-title-link">
+                <a class="catalog__cart-title-link" href="#">
                   <h3 class="catalog__cart-title">Декаф Флэт Уайт</h3>
                 </a>
                 <p class="catalog__cart-paragraph">Кофе без кофеина из&nbsp;Эфиопии
                   с&nbsp;натуральным фермерским молоком</p>
                 <div class="catalog__price-wrap">
                   <span class="catalog__price">225₽</span>
-                 <a href ="#" class="catalog__cart-button button">В корзину</a>
+                 <a class="catalog__cart-button button" href="#">В корзину</a>
                 </div>
               </li>
               <li class="catalog__cart-item">
-                <a href="#" class="catalog__cart-link-img">
+                <a class="catalog__cart-link-img" href="#">
                   <picture>
-                    <source type="image/webp" srcset="images/can-coffee-5@1x.webp, images/can-coffee-5@2x.webp" width="130" height="188" alt="Coffe">
+                    <source type="image/webp" srcset="images/can-coffee-5@1x.webp" width="130" height="188">
                     <img class="catalog__cart-img" src="images/can-coffee-5@1x.png" srcset="images/can-coffee-5@2x.png" width="130" height="188" alt="Coffe">
                   </picture>
                 </a>
-                <a href="#" class="catalog__cart-title-link">
+                <a class="catalog__cart-title-link" href="#">
                   <h3 class="catalog__cart-title">Декаф Флэт Уайт</h3>
                 </a>
                 <p class="catalog__cart-paragraph">Кофе без кофеина из&nbsp;Эфиопии
                   с&nbsp;натуральным фермерским молоком</p>
                 <div class="catalog__price-wrap">
                   <span class="catalog__price">225₽</span>
-                 <a href ="#" class="catalog__cart-button button">В корзину</a>
+                 <a class="catalog__cart-button button" href="#">В корзину</a>
                 </div>
               </li>
               <li class="catalog__cart-item">
-                <a href="#" class="catalog__cart-link-img">
+                <a class="catalog__cart-link-img" href="#">
                   <picture>
-                    <source type="image/webp" srcset="images/can-coffee-6@1x.webp, images/can-coffee-6@2x.webp" width="130" height="188" alt="Coffe">
+                    <source type="image/webp" srcset="images/can-coffee-6@1x.webp" width="130" height="188">
                     <img class="catalog__cart-img" src="images/can-coffee-6@1x.png" srcset="images/can-coffee-6@2x.png" width="130" height="188" alt="Coffe">
                   </picture>
                 </a>
-                <a href="#" class="catalog__cart-title-link">
+                <a class="catalog__cart-title-link" href="#">
                   <h3 class="catalog__cart-title">Декаф Флэт Уайт</h3>
                 </a>
                 <p class="catalog__cart-paragraph">Кофе без кофеина из&nbsp;Эфиопии
                   с&nbsp;натуральным фермерским молоком</p>
                 <div class="catalog__price-wrap">
                   <span class="catalog__price">225₽</span>
-                 <a href ="#" class="catalog__cart-button button">В корзину</a>
+                 <a class="catalog__cart-button button" href="#">В корзину</a>
                 </div>
               </li>
             </ul>
 
             <div class="catalog__pagination-wrap">
-              <a href="#" class="catalog__pagination-button catalog__pagination-button--prev disabled"><span class="catalog__pagination-button-text">Назад</span></a>
+              <a class="catalog__pagination-button catalog__pagination-button--prev disabled" href="#"><span class="catalog__pagination-button-text">Назад</span></a>
               <ul class="catalog__pagination-list">
                 <li class="catalog__pagination-item">
-                  <a class="catalog__pagination-link catalog__pagination-link--current " href="">1</a>
+                  <a class="catalog__pagination-link catalog__pagination-link--current" href="#">1</a>
                 </li>
                 <li class="catalog__pagination-item">
                   <a class="catalog__pagination-link" href="#">2</a>
@@ -419,22 +429,22 @@
                   <a class="catalog__pagination-link" href="#">3</a>
                 </li>
               </ul>
-              <a href="#" class="catalog__pagination-button catalog__pagination-button--next"><span class="catalog__pagination-button-text">Вперед</span></a>
+              <a class="catalog__pagination-button catalog__pagination-button--next" href="#"><span class="catalog__pagination-button-text">Вперед</span></a>
             </div>
           </div>
         </div>
 
       </section>
 
-      <section  class="map " data-test="map">
+      <section  class="map" data-test="map">
         <h2 class="visually-hidden">Карта</h2>
         <div class="map__img-wrap">
           <picture>
-            <source media="(min-width: 1440px)" width="1440" height="540" type="image/png" srcset="images/map/map-desktop@1x.png, images/map/map-desktop@2x.png">
-            <source media="(min-width: 768px)" width="768" height="480" type="image/png" srcset="images/map/map-tablet@1x.png, images/map/map-tablet@2x.png">
-            <source type="image/webp" srcset="images/map/map-mobile@1x.webp, images/map/map-mobile@2x.webp" width="320" height="420" alt="Карта">
-            <source media="(min-width: 1440px)" width="1440" height="540" type="image/png" srcset="images/map/map-desktop@1x.png, images/map/map-desktop@2x.png">
-            <source media="(min-width: 768px)" width="768" height="480" type="image/png" srcset="images/map/map-tablet@1x.png, images/map/map-tablet@2x.png">
+            <source media="(min-width: 1440px)" width="1440" height="540" type="image/png" srcset="images/map/map-desktop@1x.png">
+            <source media="(min-width: 768px)" width="768" height="480" type="image/png" srcset="images/map/map-tablet@1x.png">
+            <source type="image/webp" srcset="images/map/map-mobile@1x.webp" width="320" height="420">
+            <source media="(min-width: 1440px)" width="1440" height="540" type="image/png" srcset="images/map/map-desktop@1x.png">
+            <source media="(min-width: 768px)" width="768" height="480" type="image/png" srcset="images/map/map-tablet@1x.png">
             <img class="map__img" src="images/map/map-mobile@1x.png" srcset="images/map/map-mobile@2x.png" width="320" height="420" alt="Карта">
           </picture>
         </div>
@@ -444,8 +454,7 @@
     <footer class="footer" data-test="footer">
       <div class="footer__container container">
         <div class="footer__header-wrap ">
-          <a href="index.html" class="footer__logo-link">
-
+          <a class="footer__logo-link" href="index.html">
             <picture>
               <source media="(min-width: 1440px)" width="170" height="36" type="image/svg+xml" srcset="icons/stack.svg#main-logo-desktop">
               <source media="(min-width: 768px)" width="170" height="36" type="image/svg+xml" srcset="icons/stack.svg#main-logo-desktop">
@@ -460,17 +469,20 @@
           <ul class="footer__header-social-list">
             <li class="footer__header-social-item">
               <a class="footer__header-social-link" href="#">
-                <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M1.4 1.4c-1.4 1.41-1.4 3.67-1.4 8.2v.8c0 4.53 0 6.79 1.4 8.2 1.41 1.4 3.67 1.4 8.2 1.4h.8c4.53 0 6.79 0 8.2-1.4 1.4-1.41 1.4-3.67 1.4-8.2v-.8c0-4.53 0-6.79-1.4-8.2-1.41-1.4-3.67-1.4-8.2-1.4h-.8c-4.53 0-6.79 0-8.2 1.4Zm1.98 4.68c.1 5.2 2.7 8.33 7.26 8.33h.26v-2.98a4.11 4.11 0 0 1 3.45 2.98h2.37a6.58 6.58 0 0 0-3.43-4.18 6.35 6.35 0 0 0 2.93-4.15h-2.15c-.47 1.65-1.85 3.15-3.17 3.3v-3.3h-2.15v5.77c-1.33-.33-3.02-1.95-3.1-5.77h-2.27Z" fill=""/></svg>
+                <span class="visually-hidden">vk</span>
+                <svg viewBox="0 0 20 20" width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M1.4 1.4c-1.4 1.41-1.4 3.67-1.4 8.2v.8c0 4.53 0 6.79 1.4 8.2 1.41 1.4 3.67 1.4 8.2 1.4h.8c4.53 0 6.79 0 8.2-1.4 1.4-1.41 1.4-3.67 1.4-8.2v-.8c0-4.53 0-6.79-1.4-8.2-1.41-1.4-3.67-1.4-8.2-1.4h-.8c-4.53 0-6.79 0-8.2 1.4Zm1.98 4.68c.1 5.2 2.7 8.33 7.26 8.33h.26v-2.98a4.11 4.11 0 0 1 3.45 2.98h2.37a6.58 6.58 0 0 0-3.43-4.18 6.35 6.35 0 0 0 2.93-4.15h-2.15c-.47 1.65-1.85 3.15-3.17 3.3v-3.3h-2.15v5.77c-1.33-.33-3.02-1.95-3.1-5.77h-2.27Z"/></svg>
               </a>
             </li>
             <li class="footer__header-social-item">
-              <a class="footer__header-social-link" href="">
-                <svg viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11 0a11 11 0 0 0-4 21.25c-.1-.87-.2-2.21.03-3.16l1.29-5.47s-.33-.66-.33-1.63c0-1.53.89-2.67 2-2.67.93 0 1.38.7 1.38 1.54 0 .95-.6 2.36-.9 3.67-.27 1.1.54 1.99 1.62 1.99 1.96 0 3.46-2.07 3.46-5.04 0-2.64-1.9-4.48-4.6-4.48a4.76 4.76 0 0 0-4.96 4.78c0 .94.36 1.96.82 2.5.09.12.1.21.07.32l-.3 1.25c-.05.2-.16.24-.37.15-1.38-.64-2.23-2.65-2.23-4.26 0-3.47 2.52-6.66 7.26-6.66 3.82 0 6.78 2.72 6.78 6.35 0 3.8-2.39 6.84-5.7 6.84-1.12 0-2.17-.58-2.52-1.26l-.69 2.62a12.3 12.3 0 0 1-1.37 2.88 11 11 0 1 0 3.26-21.51Z" fill=""/></svg>
+              <a class="footer__header-social-link" href="#">
+                <span class="visually-hidden">pinterest</span>
+                <svg viewBox="0 0 22 22" width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11 0a11 11 0 0 0-4 21.25c-.1-.87-.2-2.21.03-3.16l1.29-5.47s-.33-.66-.33-1.63c0-1.53.89-2.67 2-2.67.93 0 1.38.7 1.38 1.54 0 .95-.6 2.36-.9 3.67-.27 1.1.54 1.99 1.62 1.99 1.96 0 3.46-2.07 3.46-5.04 0-2.64-1.9-4.48-4.6-4.48a4.76 4.76 0 0 0-4.96 4.78c0 .94.36 1.96.82 2.5.09.12.1.21.07.32l-.3 1.25c-.05.2-.16.24-.37.15-1.38-.64-2.23-2.65-2.23-4.26 0-3.47 2.52-6.66 7.26-6.66 3.82 0 6.78 2.72 6.78 6.35 0 3.8-2.39 6.84-5.7 6.84-1.12 0-2.17-.58-2.52-1.26l-.69 2.62a12.3 12.3 0 0 1-1.37 2.88 11 11 0 1 0 3.26-21.51Z"/></svg>
               </a>
             </li>
             <li class="footer__header-social-item">
-              <a class="footer__header-social-link" href="">
-                <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M1.4 1.4c-1.4 1.41-1.4 3.67-1.4 8.2v.91c0 4.46 0 6.7 1.4 8.09 1.41 1.4 3.67 1.4 8.2 1.4h.91c4.46 0 6.7 0 8.09-1.4 1.4-1.41 1.4-3.67 1.4-8.2v-.91c0-4.46 0-6.7-1.4-8.09-1.41-1.4-3.67-1.4-8.2-1.4h-.91c-4.46 0-6.7 0-8.09 1.4Zm8.62 8.8a3.03 3.03 0 1 0-.01-6.07 3.03 3.03 0 0 0 0 6.07Zm0-4.28a1.25 1.25 0 0 1 0 2.5c-.69 0-1.25-.56-1.25-1.25a1.23 1.23 0 0 1 1.25-1.25Zm1.21 6.76a5.73 5.73 0 0 0 1.76-.72.88.88 0 0 0 .28-1.24.88.88 0 0 0-1.24-.27 3.85 3.85 0 0 1-4.08 0 .9.9 0 0 0-1.23.27.9.9 0 0 0 .3 1.22 5.8 5.8 0 0 0 1.77.72l-1.69 1.69a.89.89 0 0 0 0 1.25c.18.18.4.25.63.25.24 0 .46-.09.64-.25l1.67-1.67 1.67 1.67a.89.89 0 0 0 1.25-1.25l-1.73-1.67Z" fill=""/></svg>
+              <a class="footer__header-social-link" href="#">
+                <span class="visually-hidden">ok</span>
+                <svg viewBox="0 0 20 20" width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M1.4 1.4c-1.4 1.41-1.4 3.67-1.4 8.2v.91c0 4.46 0 6.7 1.4 8.09 1.41 1.4 3.67 1.4 8.2 1.4h.91c4.46 0 6.7 0 8.09-1.4 1.4-1.41 1.4-3.67 1.4-8.2v-.91c0-4.46 0-6.7-1.4-8.09-1.41-1.4-3.67-1.4-8.2-1.4h-.91c-4.46 0-6.7 0-8.09 1.4Zm8.62 8.8a3.03 3.03 0 1 0-.01-6.07 3.03 3.03 0 0 0 0 6.07Zm0-4.28a1.25 1.25 0 0 1 0 2.5c-.69 0-1.25-.56-1.25-1.25a1.23 1.23 0 0 1 1.25-1.25Zm1.21 6.76a5.73 5.73 0 0 0 1.76-.72.88.88 0 0 0 .28-1.24.88.88 0 0 0-1.24-.27 3.85 3.85 0 0 1-4.08 0 .9.9 0 0 0-1.23.27.9.9 0 0 0 .3 1.22 5.8 5.8 0 0 0 1.77.72l-1.69 1.69a.89.89 0 0 0 0 1.25c.18.18.4.25.63.25.24 0 .46-.09.64-.25l1.67-1.67 1.67 1.67a.89.89 0 0 0 1.25-1.25l-1.73-1.67Z" /></svg>
               </a>
             </li>
           </ul>
@@ -478,20 +490,20 @@
 
         <div class="footer__main-content-wrap ">
           <div class="footer__list-links">
-            <div class="footer__item-colomn ">
+            <div class="footer__item-colomn">
               <h2 class="footer__menu-title">Интернет-магазин</h2>
               <ul class="footer__sumbmenu">
-                <li class="footer__submenu__item">
-                  <a href="" class="footer__submenu-link">Каталог</a>
+                <li class="footer__submenu-item">
+                  <a class="footer__submenu-link" href="#">Каталог</a>
                 </li>
-                <li class="footer__submenu__item">
-                  <a href="" class="footer__submenu-link">Доставка</a>
+                <li class="footer__submenu-item">
+                  <a class="footer__submenu-link" href="#">Доставка</a>
                 </li>
-                <li class="footer__submenu__item">
-                  <a href="" class="footer__submenu-link">Способы оплаты</a>
+                <li class="footer__submenu-item">
+                  <a class="footer__submenu-link" href="#">Способы оплаты</a>
                 </li>
-                <li class="footer__submenu__item">
-                  <a href="" class="footer__submenu-link">О нас</a>
+                <li class="footer__submenu-item">
+                  <a class="footer__submenu-link" href="#">О нас</a>
                 </li>
               </ul>
             </div>
@@ -500,14 +512,14 @@
             <div class="footer__item-colomn">
               <h2 class="footer__menu-title">Медиа</h2>
               <ul class="footer__sumbmenu">
-                <li class="footer__submenu__item">
-                  <a href="" class="footer__submenu-link">Блог</a>
+                <li class="footer__submenu-item">
+                  <a class="footer__submenu-link" href="#">Блог</a>
                 </li>
-                <li class="footer__submenu__item">
-                  <a href="" class="footer__submenu-link">Информация для СМИ</a>
+                <li class="footer__submenu-item">
+                  <a class="footer__submenu-link" href="#">Информация для СМИ</a>
                 </li>
-                <li class="footer__submenu__item">
-                  <a href="" class="footer__submenu-link">Правовая информация</a>
+                <li class="footer__submenu-item">
+                  <a class="footer__submenu-link" href="#">Правовая информация</a>
                 </li>
               </ul>
             </div>
@@ -516,11 +528,11 @@
             <div class="footer__item-colomn">
               <h2 class="footer__menu-title">Контакты</h2>
               <ul class="footer__sumbmenu">
-                <li class="footer__submenu__item">
-                  <a href="#" class="footer__submenu-link footer__submenu-link--address">Санкт-Петербург, набережная реки Карповки, дом&nbsp;5</a>
+                <li class="footer__submenu-item">
+                  <a class="footer__submenu-link footer__submenu-link--address" href="#">Санкт-Петербург, набережная реки Карповки, дом&nbsp;5</a>
                 </li>
-                <li class="footer__submenu__item">
-                  <a href="tel:+79999999999" class="footer__submenu-link footer__submenu-link--tell">+7 (999) 999-99-99</a>
+                <li class="footer__submenu-item">
+                  <a class="footer__submenu-link footer__submenu-link--tell" href="tel:+79999999999">+7 (999) 999-99-99</a>
                 </li>
               </ul>
             </div>
@@ -529,10 +541,10 @@
 
 
 
-        <div class="footer__copyright ">
-          <a href="#" class="footer__copyright-link">Разработано в
+        <div class="footer__copyright">
+          <a class="footer__copyright-link" href="#">Разработано в
             HTML Academy
-            <svg viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="m11.22 5.75-5.25-3.25-5.19 3.25v-4.34l5.22-.58 5.22.58v4.34Zm0 .58-2.1 1.3-3.14-1.97v.57l2.68 1.68-.46.29-2.22-1.4v.58l1.75 1.1-.41.29h-.01l-1.33-.82v.58l.87.53-.89.56-5.16-3.23 5.17-3.28 5.24 3.22Zm0 5.44-5.22 3.27-5.22-3.27v-4.74l5.2 3.25v.59l-3.56-2.23v.57l3.58 2.26v.6l-3.57-2.23v.57l3.57 2.26 3.6-2.27v-2.44l1.62-1.01v4.82Zm-5.22-11.77-6 .66v11.58l6 3.76 6-3.76v-11.58l-6-.66Z" fill=""/></svg>
+            <svg viewBox="0 0 12 16" width="12" height="16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="m11.22 5.75-5.25-3.25-5.19 3.25v-4.34l5.22-.58 5.22.58v4.34Zm0 .58-2.1 1.3-3.14-1.97v.57l2.68 1.68-.46.29-2.22-1.4v.58l1.75 1.1-.41.29h-.01l-1.33-.82v.58l.87.53-.89.56-5.16-3.23 5.17-3.28 5.24 3.22Zm0 5.44-5.22 3.27-5.22-3.27v-4.74l5.2 3.25v.59l-3.56-2.23v.57l3.58 2.26v.6l-3.57-2.23v.57l3.57 2.26 3.6-2.27v-2.44l1.62-1.01v4.82Zm-5.22-11.77-6 .66v11.58l6 3.76 6-3.76v-11.58l-6-.66Z"/></svg>
 
             <span class="visually-hidden">Логотип HTML Academy</span>
 
@@ -540,5 +552,6 @@
         </div>
       </div>
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.0/nouislider.min.js"></script>
   </body>
 </html>
